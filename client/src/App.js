@@ -1,7 +1,7 @@
 
 import './App.css';
 import {useState} from "react";
-import axios from 'axios';
+import axios from "axios";
 
 function App() {
 
@@ -35,42 +35,42 @@ function App() {
         <div className="form">
           <label>name:</label>
           <input type="text"
-          onChane = {(event) =>{
+          onChange = {(event) =>{
             setName(event.target.value)
           }
         }
         />
           <label>surname:</label>
           <input type="text"
-          onChane = {(event) =>{
+          onChange = {(event) =>{
             setSurname(event.target.value)
           }
         }
           />
           <label>email:</label>
           <input type="text"
-          onChane = {(event) =>{
+          onChange = {(event) =>{
             setEmail(event.target.value)
           }
         }
           />
           <label>age:</label>
           <input type="number"
-          onChane = {(event) =>{
+          onChange = {(event) =>{
             setAge(event.target.value)
           }
         }
           />
           <labe>grade:</labe>
           <input type="number"
-          onChane = {(event) =>{
+          onChange = {(event) =>{
             setGrade(event.target.value)
           }
         }
           />
           <label>gender:</label>
           <input type="text"
-          onChane = {(event) =>{
+          onChange = {(event) =>{
             setGender(event.target.value)
           }
         }
