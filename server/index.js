@@ -6,13 +6,15 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
+//connect to database
 const db = mysql.createConnection({
         user: "root",
         host: "localhost",
         password: "Khuljohn-studi0",
-        database: "register",
+        database: "regstatus",
     });
 
+    //request the infomation from the from frontend
 app.post('/create',(req,res) => {
     const name = req.body.name;
     const surname = req.body.surname;
@@ -21,8 +23,9 @@ app.post('/create',(req,res) => {
     const grade = req.body.grade;
     const gender = req.body.gender;
 
+    //insert information to the table
     db.query(
-    "INSERT INTO students (name, surname, email, age, grade, gender) Values(?,?,?,?,?,?)",
+    "INSERT INTO infomation (name, surname, email, age, grade, gender) Values(?,?,?,?,?,?)",
     [name, surname, email, age, grade, gender],
     (err, result) =>{
         if(err){

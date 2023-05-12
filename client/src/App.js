@@ -61,7 +61,7 @@ function App() {
           }
         }
           />
-          <labe>grade:</labe>
+          <label>grade:</label>
           <input type="number"
           onChange = {(event) =>{
             setGrade(event.target.value)
