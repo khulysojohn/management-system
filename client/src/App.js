@@ -12,6 +12,8 @@ function App() {
   const[grade,setGrade] = useState(0);
   const[gender,setGender] = useState("");
 
+  const[studentList,setStudentList] = useState([]);
+
   const addStudent = () =>{
     axios.post("http://localhost:3001/create",
     {
@@ -24,7 +26,14 @@ function App() {
     }).then(() =>{
       console.log("success");
     });
-  }
+
+    
+  };
+  const getStudent =() => {
+    Axios.get("http://localhost:3001/student").then((response) =>{
+      console.log(response);
+    });
+  };
 
   return (
     <div className="App">
@@ -80,7 +89,10 @@ function App() {
         <div className="button">
           <button onClick={addStudent}>Add student</button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <button>Show student</button>
+          <button onClick={getStudent}>Show student</button>
+        </div>
+        <div className="student">
+          
         </div>
         
     </div>

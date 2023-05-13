@@ -33,8 +33,17 @@ app.post('/create',(req,res) => {
         }else{
             res.send("values inserted");
         }
-    }
-    );
+    });
+});
+
+app.get('/student',(req,res) => {
+    db.query("SELECT * FROM infomation", (err, result) =>{
+        if (err){
+            console.log(err)
+        }else{
+            res.send(result);
+        }
+    });
 });
 app.listen(3001, () =>{
     console.log("hey your server is running at port 3001");
