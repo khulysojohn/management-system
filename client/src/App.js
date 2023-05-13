@@ -30,7 +30,7 @@ function App() {
     
   };
   const getStudent =() => {
-    Axios.get("http://localhost:3001/student").then((response) =>{
+    axios.get("http://localhost:3001/student").then((response) =>{
       console.log(response);
     });
   };
@@ -92,7 +92,7 @@ function App() {
           <button onClick={getStudent}>Show student</button>
         </div>
         <div className="student">
-          
+
         </div>
         
     </div>
