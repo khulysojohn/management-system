@@ -36,7 +36,7 @@ app.post('/create',(req,res) => {
     });
 });
 
-app.get('/student',(req,res) => {
+app.get('/infomation',(req,res) => {
     db.query("SELECT * FROM infomation", (err, result) =>{
         if (err){
             console.log(err)

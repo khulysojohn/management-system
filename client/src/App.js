@@ -30,7 +30,7 @@ function App() {
     
   };
   const getStudent =() => {
-    axios.get("http://localhost:3001/student").then((response) =>{
+    axios.get("http://localhost:3001/infomation").then((response) =>{
       console.log(response);
     });
   };
