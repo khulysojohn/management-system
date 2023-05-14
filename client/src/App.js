@@ -11,6 +11,7 @@ function App() {
   const[age,setAge] = useState(0);
   const[grade,setGrade] = useState(0);
   const[gender,setGender] = useState("");
+  const[contact,setContact] =useState(0);
 
   const[studentList,setStudentList] = useState([]);
 
@@ -20,6 +21,7 @@ function App() {
       name: name,
       surname: surname,
       email: email,
+      contact: contact,
       age: age,
       grade: grade,
       gender: gender,
@@ -31,7 +33,7 @@ function App() {
   };
   const getStudent =() => {
     axios.get("http://localhost:3001/infomation").then((response) =>{
-      console.log(response);
+      setStudentList(response.data);
     });
   };
 
@@ -42,6 +44,7 @@ function App() {
         </div>
         
         <div className="form">
+          
           <label>name:</label>
           <input type="text"
           onChange = {(event) =>{
@@ -63,20 +66,14 @@ function App() {
           }
         }
           />
+       
           <label>age:</label>
           <input type="number"
           onChange = {(event) =>{
             setAge(event.target.value)
           }
         }
-          />
-          <label>grade:</label>
-          <input type="number"
-          onChange = {(event) =>{
-            setGrade(event.target.value)
-          }
-        }
-          />
+         />
           <label>gender:</label>
           <input type="text"
           onChange = {(event) =>{
@@ -84,6 +81,21 @@ function App() {
           }
         }
           />
+           
+          <label>grade:</label>
+          <input type="number"
+          onChange = {(event) =>{
+            setGrade(event.target.value)
+          }
+        }
+          />
+             <label>contact:</label>
+          <input type="number"
+          onChange = {(event) =>{
+            setContact(event.target.value)
+          }
+        }
+        />
         </div>
 
         <div className="button">
@@ -92,6 +104,17 @@ function App() {
           <button onClick={getStudent}>Show student</button>
         </div>
         <div className="student">
+          {studentList.map((val, key) =>{
+            return<div className="display">
+                <h3>Name: <br/>{val.name}</h3>
+                <h3>Surname:<br/> {val.surname}</h3>
+                <h3>Email:<br/> {val.email}</h3>
+                <h3>Age:<br></br> {val.age}</h3>
+                <h3>Grade: <br></br>{val.grade}</h3>
+                <h3>Gender:<br/> {val.gender}</h3>
+                <h3>Contact:<br/>{val.contact}</h3>
+            </div>
+          })}
 
         </div>
         
