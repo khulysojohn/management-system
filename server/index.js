@@ -36,7 +36,7 @@ app.post('/create',(req,res) => {
         }
     });
 });
-
+//get information from database
 app.get('/infomation',(req,res) => {
     db.query("SELECT * FROM infomation", (err, result) =>{
         if (err){
@@ -46,6 +46,8 @@ app.get('/infomation',(req,res) => {
         }
     });
 });
+
+//running node on server
 app.listen(3001, () =>{
     console.log("hey your server is running at port 3001");
 })

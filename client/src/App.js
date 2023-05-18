@@ -28,9 +28,7 @@ function App() {
     }).then(() =>{
       console.log("success");
     });
-
-    
-  };
+};
   const getStudent =() => {
     axios.get("http://localhost:3001/infomation").then((response) =>{
       setStudentList(response.data);
