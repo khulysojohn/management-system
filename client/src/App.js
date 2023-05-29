@@ -35,6 +35,7 @@ function App() {
     });
   };
 
+
   return (
     <div className="App">
         <div className="head">
@@ -104,11 +105,11 @@ function App() {
         <div className="student">
           {studentList.map((val, key) =>{
             return<div className="display">
-                <h3>Name: <br/>{val.name}</h3>
+                <h3>Name:<br/>{val.name}</h3>
                 <h3>Surname:<br/> {val.surname}</h3>
                 <h3>Email:<br/> {val.email}</h3>
-                <h3>Age:<br></br> {val.age}</h3>
-                <h3>Grade: <br></br>{val.grade}</h3>
+                <h3>Age:<br/> {val.age}</h3>
+                <h3>Grade: <br/>{val.grade}</h3>
                 <h3>Gender:<br/> {val.gender}</h3>
                 <h3>Contact:<br/>{val.contact}</h3>
             </div>
