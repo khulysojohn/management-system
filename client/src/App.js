@@ -100,7 +100,7 @@ function App() {
         <div className="button">
           <button onClick={addStudent}>Add student</button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <button onClick={getStudent}>Show student</button>
+          <button onClick={getStudent}>Show/Hide</button>
         </div>
         <div className="student">
           {studentList.map((val, key) =>{

@@ -72,11 +72,14 @@
   .display {
     display: flex;
     flex-direction: column;
+    width: 90%;
   }
 
     br {
       content: "";
     }
     
-  
+  .form{
+    width: 90%;
+  }
 }
