@@ -56,7 +56,7 @@ The server-side configuration is handled in the `server.js` file. Update the fol
 const db = mysql.createConnection({
   user: "root",
   host: "localhost",
-  password: "Khuljohn-studi0",
+  password: "************",
   database: "regstatus",
 });
 ```
