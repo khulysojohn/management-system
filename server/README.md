@@ -6,8 +6,8 @@ This project is a basic server-side application built using Express.js and MySQL
 ## Prerequisites
 Before running this code, make sure you have the following installed on your system:
 
-Node.js
-MySQL
+-Node.js
+-MySQL
 
 Installation
 To run this application, follow these steps:
