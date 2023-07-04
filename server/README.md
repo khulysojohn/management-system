@@ -19,19 +19,19 @@ To run this application, follow these steps:
 - Install the required dependencies by running the following command:
 
 
-``npm install``
+### ``npm install``
 Set up your MySQL database. Make sure you have a MySQL server running and create a new database called regstatus. Modify the database configuration in the code if necessary.
 
 ### Start the server by running the following command:
 
 
-``node index.js``
+### ``node index.js``
 The server will start running on port 3001, and you should see a message in the console indicating that the server is running.
 
 ## Usage
 This application provides two API endpoints:
 
-``POST /create:``
+### ``POST /create:``
 This endpoint allows you to create a new record in the infomation table of the MySQL database. To create a record, send a POST request to this endpoint with the following JSON payload:
 
 ```json 
@@ -48,7 +48,7 @@ This endpoint allows you to create a new record in the infomation table of the M
 
 Replace the values with the information you want to store. If the record is created successfully, you will receive a response with the message "values inserted".
 
-``GET /infomation:``
+### ``GET /infomation:``
 This endpoint allows you to retrieve all records from the infomation table. Send a GET request to this endpoint to retrieve all records stored in the database. The response will be a JSON array containing the retrieved records.
 
 ## Configuration
@@ -59,7 +59,7 @@ If your MySQL server is running on a different host or port, or if you have a di
 const db = mysql.createConnection({
   user: "root",
   host: "localhost",
-  password: "Khuljohn-studi0",
+  password: "*************",
   database: "regstatus",
 });
 ```
