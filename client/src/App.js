@@ -14,6 +14,7 @@ function App() {
   const[contact,setContact] =useState(0);
 
   const[studentList,setStudentList] = useState([]);
+  
 
   const addStudent = () =>{
     axios.post("http://localhost:3001/create",
@@ -29,12 +30,12 @@ function App() {
       console.log("success");
     });
 };
-  const getStudent =() => {
+  const showStudent =() => {
     axios.get("http://localhost:3001/infomation").then((response) =>{
       setStudentList(response.data);
     });
   };
-
+  const[showList,setShowList] = useState(showStudent); 
 
   return (
     <div className="App">
@@ -100,10 +101,10 @@ function App() {
         <div className="button">
           <button onClick={addStudent}>Add student</button>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <button onClick={getStudent}>Show/Hide</button>
+          <button onClick={() =>{setShowList(!showList)}}>Show/Hide</button>
         </div>
         <div className="student">
-          {studentList.map((val, key) =>{
+          {showList && studentList.map((val, key) =>{
             return<div className="display">
                 <h3>Name:<br/>{val.name}</h3>
                 <h3>Surname:<br/> {val.surname}</h3>
