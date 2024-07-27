@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import '../App.css';
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -16,7 +17,7 @@ const Register = () => {
     };
 
     return (
-        <div>
+        <div className='reg-container'>
             <h1>Register</h1>
             <form onSubmit={handleSubmit}>
                 <label>Name:</label>

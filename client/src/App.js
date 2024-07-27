@@ -1,9 +1,11 @@
 import React from 'react';
+import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import Register from './pages/register';
 import StudentList from './pages/display';
 import Navbar from './pages/Navbar';
+
 
 const App = () => {
     return (

@@ -6,7 +6,7 @@ const Display = () => {
 
     useEffect(() => {
         // Fetch data from the backend
-        axios.get('http://localhost:5000/register')
+        axios.get('http://localhost:3306/regstatus')
             .then(response => {
                 setStudents(response.data);
             })

@@ -18,16 +18,15 @@ const db = mysql.createConnection({
 app.post('/create',(req,res) => {
     const name = req.body.name;
     const surname = req.body.surname;
-    const email = req.body.email;
     const age = req.body.age;
     const grade = req.body.grade;
     const gender = req.body.gender;
-    const contact = req.body.contact;
+    
 
     //insert information to the table
     db.query(
-    "INSERT INTO infomation (name, surname, email, age, grade, gender,contact) Values(?,?,?,?,?,?,?)",
-    [name, surname, email, age, grade, gender,contact],
+    "INSERT INTO infomation (name, surname, age, grade, gender) Values(?,?,?,?,?,?,?)",
+    [name, surname, age, grade, gender],
     (err, result) =>{
         if(err){
             console.log(err)
