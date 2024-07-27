@@ -1,27 +1,97 @@
-
-/* index.css */
-
-/* Reset some default browser styles */
-* {
+/* General Styles */
+html,body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+
+}
+body{
+  background-color: aqua;
 }
 
-/* Set a default font and background for the body */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  line-height: 1.6;
+.navbar {
+  background: #333;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-/* Add some padding to the main container */
-.App {
-  padding: 20px;
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1500px;
+  padding: 0 20px;
 }
 
-/* Make forms look a bit nicer */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.navbar-link {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.navbar-link:hover {
+  
+  border-radius: 4px;
+}
+
+/* Mobile Menu Styles */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  position: absolute;
+  right: 20px;
+}
+.fas {
+  color: #fff;
+}
+.container {
+  margin: 4rem;
+  align-content: center;
+}
+
+.container .home-header {
+  text-align: center;
+}
+.container img {
+   border-radius: 2rem;
+  
+}
+
+.main-content {
+  padding-top: 80px; /* Adjust this if navbar height changes */
+  padding-top: 80px; /* Adjust this if navbar height changes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
 form {
   max-width: 600px;
   margin: 20px auto;
@@ -38,7 +108,7 @@ form label {
 }
 
 form input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
@@ -57,6 +127,57 @@ form button {
 
 form button:hover {
   background-color: #2980b9;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+
+  .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      background: #333;
+      padding: 0;
+      margin: 0;
+  }
+
+  .nav-menu.active {
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+  }
+
+  .nav-item {
+      width: 100%;
+  }
+
+  .navbar-link {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+  }
+
+  .navbar-link:hover {
+    
+      border-radius: 0;
+  }
 }
 
 /* Additional styles for responsiveness */
