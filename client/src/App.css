@@ -1,188 +1,335 @@
-/* General Styles */
-html,body {
+/* Reset some default styles for consistency */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-
-}
-body{
-  background-color: aqua;
 }
 
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #3498db;
+}
+
+/* General Styles for the Navbar */
 .navbar {
-  background: #333;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  position: fixed;
   width: 100%;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  
+  padding: 10px 20px;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 100%;
   width: 100%;
-  max-width: 1500px;
-  padding: 0 20px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #ecf0f1;
+  cursor: pointer;
+  display: none;
+  transition: color 0.3s ease;
+}
+
+.menu-icon:hover {
+  color: #3498db;
 }
 
 .nav-menu {
-  display: flex;
-  align-items: center;
   list-style: none;
-  text-align: center;
+  display: flex;
   margin: 0;
+  padding: 0;
 }
 
 .nav-item {
-  height: 80px;
+  margin: 0 15px;
 }
 
 .navbar-link {
-  color: #fff;
-  display: flex;
-  align-items: center;
+  color: #ecf0f1;
   text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .navbar-link:hover {
-  
-  border-radius: 4px;
+  color: #3498db;
 }
 
-/* Mobile Menu Styles */
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  font-size: 2rem;
-  position: absolute;
-  right: 20px;
-}
-.fas {
-  color: #fff;
-}
+/* Container Styles */
 .container {
-  margin: 4rem;
-  align-content: center;
-}
-
-.container .home-header {
-  text-align: center;
-}
-.container img {
-   border-radius: 2rem;
-  
-}
-
-.main-content {
-  padding-top: 80px; /* Adjust this if navbar height changes */
-  padding-top: 80px; /* Adjust this if navbar height changes */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: calc(100vh - 80px);
-}
-form {
-  max-width: 600px;
-  margin: 20px auto;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
   padding: 20px;
-  background-color: #fff;
+  background: #3498db;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+/* Header Styles */
+.home-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 
-form input {
+/* Image Styles */
+.container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.reg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* Full viewport height */
+  padding: 20px;
+  background: #3498db;
+
+}
+
+/* Header Styles */
+.reg-container h1 {
+  margin-top: 20vh;
+  margin-top: 10vh;
+  font-size: 2rem;
+  
+  font-weight: 700;
+  /* Bold text */
+  color: #2c3e50;
+  /* Dark color for the header text */
+  margin-bottom: 20px;
+  /* Space below the header */
+}
+
+/* Form Styles */
+form {
   width: 95%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  /* Full width of the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Light shadow for modern look */
+  border-radius: 8px;
+  /* Rounded corners */
+  max-width: 90%;
+  /* Maximum width of the container */
+  margin: 0 auto;
+  /* Center horizontally */
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 5px;
+
 }
 
-form button {
+label {
+  display: block;
+  /* Block display for labels */
+  margin-bottom: 8px;
+  /* Space below the label */
+  font-weight: 500;
+  /* Slightly bold text */
+}
+
+input {
   width: 100%;
+  /* Full width of the form */
+  padding: 10px;
+  margin-bottom: 15px;
+  /* Space between input fields */
+  border: 1px solid #ddd;
+  /* Light border color */
+  border-radius: 4px;
+  /* Rounded corners for inputs */
+  font-size: 16px;
+  /* Font size for readability */
+}
+
+button {
+  width: 100%;
+  /* Full width of the container */
   padding: 10px;
   background-color: #3498db;
-  color: #fff;
+  /* Primary button color */
+  color: #ffffff;
+  /* Text color for the button */
   border: none;
+  /* Remove default border */
   border-radius: 4px;
+  /* Rounded corners */
+  font-size: 16px;
+  /* Font size for readability */
   cursor: pointer;
+  /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
 }
 
-form button:hover {
+button:hover {
   background-color: #2980b9;
+  /* Darker shade on hover */
 }
 
-@media screen and (max-width: 960px) {
-  .navbar-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-  }
+/* Container Styles */
+.student-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px; /* Space between cards */
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 0 auto; /* Center horizontally */
+  background: #2980b9;
+  height: 100vh;
+}
 
+/* Card Styles */
+.student-card {
+  background: #ffffff; /* White background for cards */
+  border: 1px solid #ddd; /* Light border color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  width: 300px; /* Fixed width for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for cards */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+}
+
+.student-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
+
+.student-card h3 {
+  font-size: 1.1rem; /* Font size for student details */
+  font-weight: 500; /* Slightly bold text */
+  color: #2c3e50; /* Dark color for text */
+  margin-bottom: 10px; /* Space below headings */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .menu-icon {
-      display: block;
+    display: block;
   }
 
   .nav-menu {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 90vh;
-      position: absolute;
-      top: 80px;
-      left: -100%;
-      opacity: 1;
-      transition: all 0.5s ease;
-      background: #333;
-      padding: 0;
-      margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background-color: #2c3e50;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
   }
 
   .nav-menu.active {
-      left: 0;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
+    transform: translateX(0);
   }
 
   .nav-item {
-      width: 100%;
+    margin: 15px 0;
+    text-align: center;
   }
 
   .navbar-link {
-      text-align: center;
-      padding: 2rem;
-      width: 100%;
-      display: table;
+    font-size: 18px;
+
+  }
+ /*responsive for home container */
+  .home-header {
+    font-size: 2rem;
+    /* Slightly smaller font size on small screens */
   }
 
-  .navbar-link:hover {
-    
-      border-radius: 0;
+  .container {
+    padding: 15px;
+  }
+
+  .reg-container {
+    padding: 15px;
+  }
+
+  .reg-container h1 {
+    font-size: 1.5rem;
+    /* Slightly smaller font size on small screens */
+  }
+
+  input {
+    font-size: 14px;
+    /* Smaller font size for inputs on small screens */
+  }
+
+  button {
+    font-size: 14px;
+    /* Smaller font size for button on small screens */
   }
 }
 
-/* Additional styles for responsiveness */
-@media (max-width: 600px) {
-  form {
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .student-container {
+    padding: 15px;
+    gap: 15px; /* Reduced gap between cards on small screens */
+  }
+
+  .student-card {
+    width: 100%; /* Full width for cards on smaller screens */
+    max-width: 500px; /* Maximum width for larger cards */
+  }
+
+  .student-card h3 {
+    font-size: 1rem; /* Smaller font size for headings on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .student-container {
     padding: 10px;
+    gap: 10px; /* Further reduced gap between cards on very small screens */
+  }
+
+  .student-card {
+    width: 100%; /* Full width for cards on very small screens */
+    max-width: 400px; /* Maximum width for larger cards on very small screens */
+  }
+
+  .student-card h3 {
+    font-size: 0.9rem; /* Smaller font size for headings on very small screens */
   }
 }

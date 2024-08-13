@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
@@ -13,7 +15,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="menu-icon" onClick={handleMobileMenuToggle}>
-                    <i className={isMobileMenuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+                    <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
                 </div>
                 <ul className={isMobileMenuOpen ? 'nav-menu active' : 'nav-menu'}>
                     <li className="nav-item">
