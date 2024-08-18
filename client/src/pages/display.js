@@ -18,13 +18,14 @@ const Display = () => {
 
     return (
         <div className="student-container">
+            <h1 className="student-header">Students</h1>
             {students.map((student, index) => (
                 <div className="student-card" key={index}>
-                    <h3>Name: <br /> {student.name}</h3>
-                    <h3>Surname: <br /> {student.surname}</h3>
-                    <h3>Age: <br /> {student.age}</h3>
-                    <h3>Grade: <br /> {student.grade}</h3>
-                    <h3>Gender: <br /> {student.gender}</h3>
+                    <h3>Name:  {student.name}</h3>
+                    <h3>Surname: {student.surname}</h3>
+                    <h3>Age:  {student.age}</h3>
+                    <h3>Grade: {student.grade}</h3>
+                    <h3>Gender:  {student.gender}</h3>
                 </div>
             ))}
         </div>
