@@ -271,11 +271,11 @@ button:hover {
 @media (max-width:680px) {
   .student-card {
     display: grid;
+    grid-gap:1px;
+    padding: 2px;
   }
 
-  .student-card h3 {
-    margin: 2px;
-  }
+ 
 }
 
 
